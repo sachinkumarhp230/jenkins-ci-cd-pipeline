@@ -38,7 +38,7 @@ pipeline {
 	    steps{
 		
 		  sh '''
-		  sudo scp index.html ubuntu:172.31.23.46/var/www/html/
+		  scp -o StrictHostKeyChecking=no index.html ubuntu:172.31.23.46/var/www/html/
 		  '''
 		}
 	  }
